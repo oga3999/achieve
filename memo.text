@@ -1,0 +1,5 @@
+#heroku config:get SENDGRID_USERNAME
+app69494370@heroku.com
+
+#heroku config:get SENDGRID_PASSWORD
+ibj3y1ie8307
