@@ -3,3 +3,38 @@ app69494370@heroku.com
 
 #heroku config:get SENDGRID_PASSWORD
 ibj3y1ie8307
+
+Herokuのアセットプリコンパイル
+rake assets:precompile RAILS_ENV=production
+
+gitのステージングに全て保存
+git add -A
+
+gitのリポジトリに保存
+git commit -m "コメント"
+
+herokuにgitのデータを送付
+git push heroku master
+
+herokuでテーブルを作成
+heroku run rake db:migrate RAILS_ENV=production
+
+環境変数を設定する
+heroku config:add SECRET_TOKEN="$(bundle exec rake secret)"
+
+herokuでのseedを作成する
+heroku run rake db:seed
+
+herokuのデータベースをリセット
+実施後にtype以下の内容を再度コマンドに打ち込む
+ heroku run rake db:migrate
+ 　　　　　　　　　　　                を終了後に打ちこむ
+
+サーバー起動
+rails s -b 0.0.0.0
+
+アクセス
+http://localhost:3000/
+
+heroku上でrails cで実行
+heroku run rails c
