@@ -1,3 +1,3 @@
-class Poem < ActiveResource::Base
-  self.site = "https://enigmatic-temple-50235.herokuapp.com"
+class Poem
+  include Her::Model
 end
