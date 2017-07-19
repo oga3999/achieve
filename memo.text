@@ -26,6 +26,7 @@ herokuでのseedを作成する
 heroku run rake db:seed
 
 herokuのデータベースをリセット
+heroku pg:reset DATABASE
 実施後にtype以下の内容を再度コマンドに打ち込む
  heroku run rake db:migrate
  　　　　　　　　　　　                を終了後に打ちこむ
