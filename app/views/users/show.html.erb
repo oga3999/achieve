@@ -3,7 +3,9 @@
   <% @user.followed_users.each do |followed| %>
       <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
         <%= profile_img(followed) %>
-        <p><%= followed.name %></p>
+        <%= link_to user_path(followed) do%>
+          <p><strong><%= followed.name %></strong></p>
+        <% end %>
         <%= followed.email %>
       </div>
   <% end %>
@@ -14,7 +16,9 @@
   <% @user.followers.each do |follower| %>
       <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
         <%= profile_img(follower) %>
-        <p><%= follower.name %></p>
+        <%= link_to user_path(follower) do%>
+          <p><strong><%= follower.name %></strong></p>
+        <% end %>
         <%= follower.email %>
       </div>
   <% end %>

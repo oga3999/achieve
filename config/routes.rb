@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'notifications/index'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   devise_for :users, controllers:{
@@ -29,6 +31,10 @@ Rails.application.routes.draw do
   end
 
   resources :poems, only:[:index,:show]
+
+  resources :conversations do
+    resources :messages
+  end
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
