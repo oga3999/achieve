@@ -30,6 +30,7 @@ heroku pg:reset DATABASE
 実施後にtype以下の内容を再度コマンドに打ち込む
  heroku run rake db:migrate
  　　　　　　　　　　　                を終了後に打ちこむ
+ooo
 
 サーバー起動
 rails s -b 0.0.0.0
